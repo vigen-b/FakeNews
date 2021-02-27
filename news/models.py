@@ -7,7 +7,7 @@ class News(models.Model):
         "auth.User", related_name="news", on_delete=models.CASCADE, null=False
     )
     text = models.TextField(blank=False, null=False)
-    main_category = models.OneToOneField(
+    main_category = models.ForeignKey(
         "Category", on_delete=models.CASCADE, related_name="main_news", null=False
     )
 

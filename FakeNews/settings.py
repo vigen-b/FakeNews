@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "fake_news.permissions.IsAdminUserOrReadOnly",
+        "FakeNews.permissions.IsAdminUserOrReadOnly",
     ]
 }
 
