@@ -51,6 +51,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "fake_news.permissions.IsAdminUserOrReadOnly",
+    ]
+}
+
 ROOT_URLCONF = "FakeNews.urls"
 
 TEMPLATES = [
