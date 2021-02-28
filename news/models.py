@@ -8,9 +8,6 @@ class News(models.Model):
     main_category = models.ForeignKey(
         "Category", on_delete=models.CASCADE, related_name="main_news", null=False
     )
-    owner = models.ForeignKey(
-        "auth.User", related_name="news", on_delete=models.CASCADE, null=False
-    )
 
     def __str__(self):
         return f"{self.title}, {self.main_category.name}, {self.created_at}"

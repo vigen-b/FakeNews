@@ -8,9 +8,6 @@ class NewsList(generics.ListCreateAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer
 
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
 
 class NewsDetail(generics.RetrieveUpdateAPIView):
     queryset = News.objects.all()

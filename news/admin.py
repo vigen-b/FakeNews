@@ -27,7 +27,7 @@ class NewsAdmin(admin.ModelAdmin):
         "created_at",
     )
     search_fields = ("main_category__name__contains", "created_at")
-    fields = (("title", "main_category"), "text", "owner")
+    fields = (("title", "main_category"), "text")
     list_per_page = items_per_page
 
     def main_category_link(self, obj):

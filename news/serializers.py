@@ -3,11 +3,9 @@ from news.models import News, Category
 
 
 class NewsSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source="owner.username")
-
     class Meta:
         model = News
-        fields = ["id", "text", "created_at", "main_category", "owner"]
+        fields = ["id", "text", "created_at", "main_category"]
 
 
 class CategorySerializer(serializers.ModelSerializer):
