@@ -1,4 +1,10 @@
 from rest_framework.permissions import IsAdminUser, SAFE_METHODS
+from django.contrib import admin
+from django.contrib.auth.models import Group, User
+
+# disable user and group creation
+admin.site.unregister(Group)
+admin.site.unregister(User)
 
 
 class IsAdminUserOrReadOnly(IsAdminUser):
